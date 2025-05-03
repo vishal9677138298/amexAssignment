@@ -1,0 +1,22 @@
+{
+  "french": {
+    "url": "https://www.americanexpress.com/fr-fr/?inav=NavLogo",
+    "cookieHeader": "American Express Préférences de Cookie",
+    "products": {
+      "personalCards": "Cartes Particuliers",
+      "premiumCards": "Cartes Premium",
+      "tpsMseCards": "Cartes TPE/PME",
+      "corporateCards": "Cartes Corporate"
+    },
+    "errorMessages": {
+      "civility": "Merci de préciser votre civilité.",
+      "firstName": "Prénom obligatoire.",
+      "lastName": "Nom obligatoire.",
+      "dateOfBirth": "Vous devez avoir plus de 18 ans.",
+      "email": "Merci de vérifier le format de votre adresse email (exemple : nom@domaine.fr). Les caractères autorisés sont : lettres, chiffres, tirets (_-), arobase (@), et point (.).",
+      "phone": "Téléphone mobile obligatoire en chiffres uniquement et sans espaces. Exemple France, Guadeloupe, Martinique, Guyane, La Réunion, Saint- Barthélemy, Saint Martin, Mayotte: - 0612345678 - 0712345678 IMPORTANT : Pour tout autre pays ou région, dont Polynésie Française et Nouvelle Calédonie, merci de sélectionner l’indicatif du territoire correspondant et saisir le numéro de mobile sans le préfixe « 0 » au début.",
+      "generic": "Veuillez corriger les erreurs ci-dessus pour continuer."
+    },
+    "personalInformationHeader": "Vos informations personnelles"
+  }
+}
