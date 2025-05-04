@@ -13,7 +13,7 @@ Feature: American Express Gold Card Application
   @validateErrorMessages
   Scenario: Validate error messages during Gold Card application
     When the user fills in the application form with the following junk data, then the validation error messages must be displayed:
-      | civility | firstName | lastName | emailAddress     | phoneNumber | dateOfBirth | messagesToCheck                                                   |
+      | civility | firstName | lastName | emailAddress     | phoneNumber | dateOfBirth | errorMessagesToCheck                                              |
       |          |           |          |                  |             |             | civility, firstName, lastName, dateOfBirth, email, phone, generic |
       | *&^*&^   | *&%$      | *&^*     | #$%^$%           | 1234        | *&^*&       | civility, firstName, lastName, dateOfBirth, email, phone, generic |
       | mr       | vishal    | sugumar  | vishal@gmail.com | 123         | 23041996    | phone, generic                                                    |
@@ -21,5 +21,5 @@ Feature: American Express Gold Card Application
   @successfulSubmit
   Scenario: Validate successful Gold Card application
     When the user fills in the application form with the following valid data, then the form must be successfully submitted:
-      | civility | firstName | lastName | emailAddress     | phoneNumber | dateOfBirth | messagesToCheck |
-      | mr       | vishal    | sugumar  | vishal@gmail.com | 0612345678  | 23041996    |                 |
+      | civility | firstName | lastName | emailAddress     | phoneNumber | dateOfBirth | errorMessagesToCheck |
+      | mr       | vishal    | sugumar  | vishal@gmail.com | 0612345678  | 23041996    |                      |

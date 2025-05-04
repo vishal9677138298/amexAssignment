@@ -83,8 +83,8 @@ public class GoldCardApplicationSteps {
          * Iterates over each row of data, fills the application form, and validates the result.
          *
          * For each row:
-         * - If the "messagesToCheck" field is null, it validates that the form was successfully submitted.
-         * - If the "messagesToCheck" field is not null, it validates the error messages displayed on the form.
+         * - If the "errorMessagesToCheck" field is null, it validates that the form was successfully submitted.
+         * - If the "errorMessagesToCheck" field is not null, it validates the error messages displayed on the form.
          *
          * @param data A list of maps where each map represents a row of form data.
          *             Each map contains key-value pairs for form fields and validation messages.
@@ -95,10 +95,10 @@ public class GoldCardApplicationSteps {
             requestNewCardPage.fillFormData(row);
 
             // Check if "messagesToCheck" is null
-            if (row.get("messagesToCheck") != null) {
+            if (row.get("errorMessagesToCheck") != null) {
                 // Validate the error messages displayed on the form
                 requestNewCardPage.validateErrorMessage(
-                        row.get("messagesToCheck") // Retrieve the "messagesToCheck" field
+                        row.get("errorMessagesToCheck") // Retrieve the "messagesToCheck" field
                                 .replaceAll("\\s+", "") // Remove all whitespace
                                 .split(",")); // Split the string into an array of messages
             }
