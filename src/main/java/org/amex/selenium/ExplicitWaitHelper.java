@@ -41,6 +41,10 @@ public class ExplicitWaitHelper {
         wait.until(webDriver -> new JSExecutor(driver.getDriver()).waitTillPageIsLoaded());
     }
 
+    public boolean isElementPresent(By locator) {
+        return !driver.getDriver().findElements(locator).isEmpty();
+    }
+
     public WebDriverWait get(){
         return wait;
     }

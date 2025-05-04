@@ -5,10 +5,8 @@ import org.amex.selenium.Driver;
 import org.amex.selenium.ExplicitWaitHelper;
 import org.amex.selenium.JSExecutor;
 import org.amex.utils.JsonUtils;
-import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -119,12 +117,7 @@ public class RequestNewCardPage extends Page {
     public void validateSuccessfulSubmit(){
         expWait.waitTillPageIsLoaded();
         expWait = new ExplicitWaitHelper(driver, 3);
-        try{
-            expWait.waitTillVisibility(By.xpath(String.format(personalInformationHeader,
+        expWait.waitTillVisibility(By.xpath(String.format(personalInformationHeader,
                     JsonUtils.readJsonPropertiesBasedOnLang("homePage.json", "personalInformationHeader"))));
-        } catch (TimeoutException e){
-            new SoftAssertions().fail("The form was not submitted successfully");
-        }
-
     }
 }

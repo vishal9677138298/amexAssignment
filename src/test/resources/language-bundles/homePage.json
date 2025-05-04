@@ -17,6 +17,7 @@
       "phone": "Téléphone mobile obligatoire en chiffres uniquement et sans espaces. Exemple France, Guadeloupe, Martinique, Guyane, La Réunion, Saint- Barthélemy, Saint Martin, Mayotte: - 0612345678 - 0712345678 IMPORTANT : Pour tout autre pays ou région, dont Polynésie Française et Nouvelle Calédonie, merci de sélectionner l’indicatif du territoire correspondant et saisir le numéro de mobile sans le préfixe « 0 » au début.",
       "generic": "Veuillez corriger les erreurs ci-dessus pour continuer."
     },
-    "personalInformationHeader": "Vos informations personnelles"
+    "personalInformationHeader": "Vos informations personnelles",
+    "unknownAppError": "Le formulaire de souscription est momentanément indisponible. Nous vous invitons à recommencer ultérieurement."
   }
 }

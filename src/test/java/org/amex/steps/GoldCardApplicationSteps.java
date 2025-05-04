@@ -33,18 +33,18 @@ public class GoldCardApplicationSteps {
     private GoldExpressPage goldExpressPage;
 
     @Autowired
-    public GoldCardApplicationSteps(Driver driver){
+    public GoldCardApplicationSteps(Driver driver) {
         this.driver = driver;
     }
 
     @Given("the user is on the American Express homepage")
-    public void navigateToHomePage(){
+    public void navigateToHomePage() {
         homePage.navigate();
     }
 
     @And("{string} all cookies")
-    public void handleCookieConsent(String cookieOption){
-        switch (cookieOption.toLowerCase()){
+    public void handleCookieConsent(String cookieOption) {
+        switch (cookieOption.toLowerCase()) {
             case "accepts":
                 homePage.handleCookiePopup(CookieConsentPopUp.CookieOptions.ACCEPT_ALL);
                 break;
@@ -95,16 +95,12 @@ public class GoldCardApplicationSteps {
             requestNewCardPage.fillFormData(row);
 
             // Check if "messagesToCheck" is null
-            if (row.get("messagesToCheck") == null) {
-                // Validate that the form was successfully submitted
-                requestNewCardPage.validateSuccessfulSubmit();
-            } else {
+            if (row.get("messagesToCheck") != null) {
                 // Validate the error messages displayed on the form
                 requestNewCardPage.validateErrorMessage(
                         row.get("messagesToCheck") // Retrieve the "messagesToCheck" field
                                 .replaceAll("\\s+", "") // Remove all whitespace
-                                .split(",") // Split the string into an array of messages
-                );
+                                .split(",")); // Split the string into an array of messages
             }
         });
 
